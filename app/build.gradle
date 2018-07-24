@@ -1,0 +1,36 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "com.mbr.dcpay.demo"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    flavorDimensions "paysdk"
+    productFlavors {
+        dcpay {
+            buildConfigField "String", "CHANNEL", "\"38682966843081\""
+            buildConfigField "String", "MERCHANT_ID", "\"89898477937650\""
+        }
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    api('com.mbr.pay:lib_dcpaysdk:1.0.1.release')
+    implementation "com.android.support:appcompat-v7:26.+"
+}
