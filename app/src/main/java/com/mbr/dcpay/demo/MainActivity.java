@@ -16,11 +16,12 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.mbr.dcpay.Pay;
-import com.mbr.dcpay.PayResult;
+
 import com.mbr.dcpay.utils.OnLazyClickListener;
 import com.mbr.dcpay.utils.network.Get;
 import com.mbr.dcpay.utils.network.NetResult;
+import com.mbr.pay.Pay;
+import com.mbr.pay.PayResult;
 
 import org.json.JSONObject;
 
@@ -130,7 +131,10 @@ public class MainActivity extends AppCompatActivity {
         protected void onPostExecute(String orderInfo) {
             preTask = null;
             hideProgress();
-            if (orderInfo == null) return;
+            if (orderInfo == null) {
+                showMessage("获取订单信息失败");
+                return;
+            }
 
             callPaySdk(orderInfo); // 使用得到的签名好的订单信息字符串唤起支付APP
         }
