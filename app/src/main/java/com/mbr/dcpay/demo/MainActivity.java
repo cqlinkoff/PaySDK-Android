@@ -20,6 +20,7 @@ import android.widget.Toast;
 import com.mbr.dcpay.utils.OnLazyClickListener;
 import com.mbr.dcpay.utils.network.Get;
 import com.mbr.dcpay.utils.network.NetResult;
+import com.mbr.pay.EnvConfig;
 import com.mbr.pay.Pay;
 import com.mbr.pay.PayResult;
 
@@ -141,6 +142,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void callPaySdk(String orderInfo) {
+        //设置当前开发环境，根据环境的不同会下载不同的apk，默认为生产环境
+        EnvConfig.setEnv(EnvConfig.PRODUCT);
         // 串唤起支付APP
         Pay.pay(this, orderInfo, new Pay.OnPayListener() {
             @Override

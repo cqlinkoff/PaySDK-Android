@@ -29,7 +29,7 @@ android {
 
 dependencies {
     //implementation (name:'lib_sdk-1.0.2.release', ext: 'aar')
-    api('com.mbr.pay:lib_sdk:1.0.3.release'){
+    api('com.mbr.pay:lib_sdk:1.0.5.release'){
         changing=true
     }
     implementation "com.android.support:appcompat-v7:26.+"
