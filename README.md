@@ -1,1 +1,1 @@
-# DCPaySDK-Android
+# PaySDK-Android
