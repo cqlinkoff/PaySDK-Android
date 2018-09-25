@@ -1,10 +1,6 @@
 
 buildscript {
     repositories {
-        google()
-        jcenter()
-        mavenLocal()
-        mavenCentral()
         maven {
             url "http://47.100.116.120:9992/repository/android_public"
             credentials {
@@ -12,6 +8,11 @@ buildscript {
                 password "read"
             }
         }
+        google()
+        jcenter()
+        mavenLocal()
+        mavenCentral()
+
         maven{
             url 'http://maven.aliyun.com/nexus/content/groups/public/'
         }
@@ -26,10 +27,6 @@ buildscript {
 
 allprojects {
     repositories {
-        google()
-        jcenter()
-        mavenLocal()
-        mavenCentral()
         maven {
             url "http://47.100.116.120:9992/repository/android_public"
             credentials {
@@ -37,6 +34,11 @@ allprojects {
                 password "read"
             }
         }
+        google()
+        jcenter()
+        mavenLocal()
+        mavenCentral()
+
         maven{
             url 'http://maven.aliyun.com/nexus/content/groups/public/'
         }
