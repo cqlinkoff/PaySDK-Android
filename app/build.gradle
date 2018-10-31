@@ -9,8 +9,8 @@ android {
         versionCode 1
         versionName "1.0"
 
-        buildConfigField "String", "CHANNEL", "\"8266164582560\""
-        buildConfigField "String", "MERCHANT_ID", "\"8266163269740\""
+        buildConfigField "String", "CHANNEL", "\"000000\""
+        buildConfigField "String", "MERCHANT_ID", "\"000000\""
     }
 
     buildTypes {
