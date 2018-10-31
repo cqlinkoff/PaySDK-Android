@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/sdk-demo.iml" filepath="$PROJECT_DIR$/sdk-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dcpaySDK_demo_github.iml" filepath="$PROJECT_DIR$/dcpaySDK_demo_github.iml" />
     </modules>
   </component>
 </project>

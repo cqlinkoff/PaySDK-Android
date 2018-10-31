@@ -143,7 +143,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void callPaySdk(String orderInfo) {
         //设置当前开发环境，根据环境的不同会下载不同的apk，默认为生产环境
-        EnvConfig.setEnv(EnvConfig.PRE);
+        //EnvConfig.setEnv(EnvConfig.PRE);
+        //设置下载路径
+        EnvConfig.setDownloadUrl("https://guide.chainlong.iop");
         // 串唤起支付APP
         Pay.pay(this, orderInfo, new Pay.OnPayListener() {
             @Override
